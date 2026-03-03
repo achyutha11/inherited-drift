@@ -14,7 +14,7 @@ We investigate goal drift in state-of-the-art models across two simulated enviro
 
 ## Attribution
 
-This codebase builds on the goal drift evaluation framework originally developed by [Rauno Arike](https://github.com/RaunoArike/goal-drift-evals) and extended in collaboration with Tyler Crosse. Our contributions include the context conditioning experimental design, support for additional model families (Gemini, Qwen, GPT-5-series, Claude Sonnet 4.5), and the ER triage environment.
+This codebase builds on the goal drift evaluation framework originally developed by [Rauno Arike](https://github.com/RaunoArike/goal-drift-evals) and extended in our work with the Supervised Program for Alignment Research (SPAR). Our contributions include the context conditioning experimental design, support for additional model families (Gemini, Qwen, GPT-5-series, Claude Sonnet 4.5), and the ER triage environment.
 
 ## Repository Layout
 
