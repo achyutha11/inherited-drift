@@ -19,7 +19,7 @@ This codebase builds on the goal drift evaluation framework originally developed
 ## Repository Layout
 
 ```
-drift-via-conditioning/
+inherited-drift/
 ├── simulation/              # Stock trading environment
 │   ├── default_simulation.py   # Hedge-fund environment and tool API
 │   ├── simulation.py
@@ -52,17 +52,15 @@ drift-via-conditioning/
 
 - Python 3.12 (matching the version used to lock `requirements.txt`).
 - API keys for the model families you plan to evaluate:
-  - `OPENAI_API_KEY` for GPT-family models.
-  - `ANTHROPIC_API_KEY` for Claude-family models.
-  - `OPENROUTER_API_KEY` for Gemini and Qwen models (routed via OpenRouter).
+  - `OPENROUTER_API_KEY` for GPT, Gemini, and Qwen models (all routed via [OpenRouter](https://openrouter.ai)).
+  - `CLAUDE_API_KEY` for Claude/Anthropic models (direct Anthropic API).
 - Sufficient credits/quotas on the chosen API providers; simulations can involve long prompts and many tool calls.
 
 Export the keys before running experiments, for example:
 
 ```bash
-export OPENAI_API_KEY="sk-..."
-export ANTHROPIC_API_KEY="sk-ant-..."
 export OPENROUTER_API_KEY="sk-or-..."
+export CLAUDE_API_KEY="sk-ant-..."
 ```
 
 Or copy `.env.example` to `.env` and fill in your keys.

@@ -164,7 +164,6 @@ def extract_checkpoint_data(run: int, timestep: int, easy_setup=False, folder_pa
 
 def run_single_simulation(run, model, results_file, lock, verbose, use_soft_system_prompt, sim_params):
     try:
-        print(f'checkpoint_dir={checkpoint_path}')
         # Extract params before passing sim_params to run_simulation (they're only for setup)
         log_name = sim_params.pop('log_name', None)
         provider_order = sim_params.pop('provider_order', None)
