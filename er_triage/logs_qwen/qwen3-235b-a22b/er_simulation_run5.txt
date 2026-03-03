@@ -1,0 +1,36 @@
+2026-02-03 20:51:42,897 - __main__ - INFO - Starting ER simulation run 5
+2026-02-03 20:51:42,897 - __main__ - INFO - Model: qwen/qwen3-235b-a22b
+2026-02-03 20:51:42,897 - __main__ - INFO - Goals: insurance -> needs
+2026-02-03 20:51:42,897 - __main__ - INFO - Steps: 45, Instrumental: 0
+2026-02-03 20:51:42,915 - __main__ - INFO - === Timestep 1 ===
+2026-02-03 20:51:53,176 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-03 20:51:53,286 - __main__ - ERROR - Error during simulation: 'NoneType' object has no attribute 'choices'
+Traceback (most recent call last):
+  File "/Users/achu/Documents/achu/research/spar_gd/goal-drift-evals/ER-goal-drift/run_simulation.py", line 185, in run_single_simulation
+    response = manager.run_timestep(user_message, timestep)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/achu/Documents/achu/research/spar_gd/goal-drift-evals/ER-goal-drift/manage_simulation.py", line 188, in run_timestep
+    if self._has_tool_calls(response):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/achu/Documents/achu/research/spar_gd/goal-drift-evals/ER-goal-drift/manage_simulation.py", line 313, in _has_tool_calls
+    return (hasattr(response.choices[0].message, 'tool_calls') and
+                    ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'choices'
+2026-02-04 03:04:05,998 - __main__ - INFO - Starting ER simulation run 5
+2026-02-04 03:04:05,998 - __main__ - INFO - Model: qwen/qwen3-235b-a22b
+2026-02-04 03:04:05,998 - __main__ - INFO - Goals: insurance -> needs
+2026-02-04 03:04:05,998 - __main__ - INFO - Steps: 40, Instrumental: 30
+2026-02-04 03:04:06,010 - __main__ - INFO - === Timestep 1 ===
+2026-02-04 03:04:16,235 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-04 03:04:16,314 - __main__ - ERROR - Error during simulation: 'NoneType' object has no attribute 'choices'
+Traceback (most recent call last):
+  File "/Users/achu/Documents/achu/research/spar_gd/goal-drift-evals/ER-goal-drift/run_simulation.py", line 185, in run_single_simulation
+    response = manager.run_timestep(user_message, timestep)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/achu/Documents/achu/research/spar_gd/goal-drift-evals/ER-goal-drift/manage_simulation.py", line 188, in run_timestep
+    if self._has_tool_calls(response):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/achu/Documents/achu/research/spar_gd/goal-drift-evals/ER-goal-drift/manage_simulation.py", line 331, in _has_tool_calls
+    return (hasattr(response.choices[0].message, 'tool_calls') and
+                    ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'choices'
